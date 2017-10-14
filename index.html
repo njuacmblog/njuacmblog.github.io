@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
+</head>
+
+<body>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-zyb" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/14/zyb/" class="article-date">
+  <time datetime="2017-10-14T00:39:46.634Z" itemprop="datePublished">2017-10-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/14/zyb/">ZYB</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="/images/a.png" alt=""> </p>
+<hr>
+<p>给你两个长度为n的01串A和B，你可以做3种操作：</p>
+<ul>
+<li>1：将A串每一位向左移(即假设A串=$A_1A_2…A_n$,将A变为$A_2A_3…A_nA_1$)</li>
+<li>2：将A串每一位向右移(即假设A串=$A_1A_2…A_n$,将A变为$A_nA_1A_2A<em>3…A</em>{n-1}$)</li>
+<li>3：可以任意挑选一个i，若Bi =1，则$A_i$^=1。</li>
+</ul>
+<p>每种操作的操作次数不限，问最少操作几次可以使A=B，如果无法使A=B，则输出-1。</p>
+<p>$n \le 2000$</p>
+<p>样例输入：<br>1010<br>1100<br>样例输出：<br>3</p>
+<hr>
+<p>给你n个物品，每个物品有3种属性($a_i,b_i,c_i$)，现在你需要从中挑选k个物品，分别是 $t_1,t_2,t_3…t_k$。这k个物品需要满足以下条件：</p>
+<ul>
+<li>1：$a_{t<em>1} \wedge{} a</em>{t<em>2} \wedge{} a</em>{t<em>3} \wedge{} a</em>{t<em>4}… \wedge{} a</em>{t_k}=0$。</li>
+<li>2：对于任意一个 $b<em>i$，都至少存在一个 $j$ ($j \le k$)，使得 $b</em>{t_j}=b_i$。</li>
+<li>3：$c_{t<em>1},c</em>{t<em>2},c</em>{t<em>3}…c</em>{t_k}$必须互不相同。</li>
+</ul>
+<p>时间限制：2s</p>
+<p>数据范围：$1 \le n \le 32$,$1 \le b_i,c_i \le n$,$1 \le a_i \le 100000$。<br>样例输入：<br>5<br>1 2 1<br>1 1 2<br>1 2 2<br>2 1 1<br>3 2 2<br>样例输出：<br>2</p>
+<hr>
+<p>给你一棵n个点的树和m条非树边，每条非树边有一个权值 $x_i$。<br>你可以从m条边中挑选若干条加到树中，但必须保证每个点最多只能属于一个简单环，你能得到的收益是这些边的权值和。<br>求收益的最大值。</p>
+<p>$n \le 2<em>10^5,m \le 2</em>10^5$。</p>
+<p>样例输入：<br>  7 3<br>1 1 2 2 3 3<br>4 5 1<br>6 7 1<br>2 3 1<br>样例输出：<br>2</p>
+<hr>
+<p>给定一棵n个节点的有根树，在输入数据通过给出每个节点的父亲来表示这棵树。若某个节点的父亲为0，那么该节点即为根。现在对于每个点i，询问它的每个祖先的子树中深度不超过i的点的数量的总和(不包括i自己)。<br>时间限制：2s<br>$n \le 5*10^5$<br>样例输入：<br>4<br>0 1 2 1<br>样例输出：<br>0 2 4 2</p>
+<hr>
+<p>给你一棵n个点的有根树，每个点有一个点权a[i]，你需要在树上挑选尽可能多的点，但必须满足以下条件：<br>如果你选取了x,y，且x是y的祖先，则a[x]必须&gt;a[y]。<br>求最多能取多少个点。</p>
+<p>数据范围：$n \le 100000$。</p>
+<hr>
+<p>t次询问，每次给你n个数 $x_1,x_2…x_n$，把它们按不同的顺序排列，一共可以得到 $n!$ 个新的数，问这 $n!$ 个数中，有多少数能被 $11$ 整除，答案%998244353。<br>$n \le 2000，1 \le x_i \le 10^9$。<br>样例输入：<br>4<br>2<br>1 1<br>3<br>1 31 12<br>3<br>12345 67 84<br>9<br>1 2 3 4 5 6 7 8 9</p>
+<p>样例输出：<br>2<br>2<br>2<br>31680</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/10/14/zyb/" data-id="cj8qm0wry00020dhn7fbzn68i" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-networkflow" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/12/networkflow/" class="article-date">
+  <time datetime="2017-10-12T15:54:46.137Z" itemprop="datePublished">2017-10-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/12/networkflow/">Network Flow</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="普通网络流"><a href="#普通网络流" class="headerlink" title="普通网络流"></a>普通网络流</h2><p>在不考虑指向源点的边的情况下， 根据网络流的要求可以知道， 最大流问题实际上求解的是下面一组线性方程组。</p>
+<p>$$<br>\begin{align}<br>  &amp; 0 \le f(u, v) \le c(u, v) \<br>  &amp; \forall u \in V - {S, T},  \sum<em>{v \in V} f(v, u) = \sum</em>{v \in V} f(u, v)<br>\end{align}<br>$$</p>
+<p>$$<br>  maximize : W = \sum<em>{v \in V} f(S, v) = \sum</em>{u \in V} f(u, T)<br>$$</p>
+<h2 id="最小割"><a href="#最小割" class="headerlink" title="最小割"></a>最小割</h2><p>相应的， 最小割问题实际上是一个染色问题， 形如一个线性方程组。</p>
+<p>$$<br>\begin{align}<br>  &amp; \forall u, \chi_u \in { 0, 1 } \<br>  &amp; \chi_S = 0 \<br>  &amp; \chi_T = 1<br>\end{align}<br>$$</p>
+<p>$$<br>  minimize : W = \sum_{u, v \in V} max(\chi_v - \chi<em>u, 0) c</em>{u, v}<br>$$</p>
+<h2 id="循环流"><a href="#循环流" class="headerlink" title="循环流"></a>循环流</h2><p>循环流问题就是在一个有流量限制的图中， 寻找一个可行流满足：</p>
+<p>$$<br>\begin{align}<br>  &amp; l(u, v) \le f(u, v) \le c(u, v) \<br>  &amp; \forall u,  \sum<em>{v \in V} f(v, u) = \sum</em>{v \in V} f(u, v)<br>\end{align}<br>$$</p>
+<p>添加两个点 $S, T$.<br>令 $g(u, v) = f(u, v) - l(u, v)$ 相应的转化为, $c(S, u) = \sum<em>{v \in V} l(v, u), c(u, T) = \sum</em>{v \in V} l(u, v)$</p>
+<p>$$<br>\begin{align}<br>  l(u, v) \le f(u, v) \le c(u, v) &amp;\to 0 \le g(u, v) \le c(u, v) - l(u, v) \<br>  \forall u, \sum<em>{v \in V} f(v, u) = \sum</em>{v \in V} f(u, v) &amp;\to<br>  \forall u, \sum<em>{v \in V} g(v, u) + c(S, u) = \sum</em>{v \in V} g(u, v) + c(u, T)<br>\end{align}<br>$$</p>
+<p>对下面一个网络流模型求解。 </p>
+<p>$$<br>\begin{align}<br>  &amp;0 \le g(u, v) \le c(u, v) - l(u, v) \<br>  &amp;\forall u, \sum<em>{v \in V} g(v, u) + g(S, u) = \sum</em>{v \in V} g(u, v) + g(u, T) \<br>  &amp;maximize : \sum_{v \in V} g(S, v)<br>\end{align}<br>$$</p>
+<p>有解的情况就是 $g(S, u) = c(S, u), g(u, T) = c(u, T)$, 即满流。</p>
+<p>这应该比较容易看出来。<br>必要性. 如果原循环流有解， 那么直接在原循环流的解中让 $g(S, u) = c(S, u), g(u, T) = c(u, T)$ 就找到了网络流模型的一个解， 由于 $g(S, u) \le c(S, u), g(u, T) \le c(u, T)$, 所以这个解是最大流。 </p>
+<p>充分性. 如果找到了一个最大流， 使得 $\sum<em>{v \in V} g(S, v) = \sum</em>{v \in V} c(S, v)$, 这时候就有 $g(S, v) = c(S, v)$, 对汇点也是一样的。 将这个流带回去就是一个循环流的可行解。 </p>
+<h2 id="上下界最大流"><a href="#上下界最大流" class="headerlink" title="上下界最大流"></a>上下界最大流</h2><p>首先从汇点连一条容量为无穷大的边指向源点。 然后转化成循环流问题， 先判断有没有可行流。 </p>
+<p>找到一个可行流之后， 在残余网络上再找一个最大流， 将这两个流加起来就是上下届最大流。</p>
+<h2 id="上下界最小流"><a href="#上下界最小流" class="headerlink" title="上下界最小流"></a>上下界最小流</h2>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/10/12/networkflow/" data-id="cj8qm0wrv00010dhnf0laqshg" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/08/hello-world/" class="article-date">
+  <time datetime="2017-10-07T17:48:57.631Z" itemprop="datePublished">2017-10-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/08/hello-world/">Hello World</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/10/08/hello-world/" data-id="cj8qm0wro00000dhnms911cgz" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/10/14/zyb/">ZYB</a>
+          </li>
+        
+          <li>
+            <a href="/2017/10/12/networkflow/">Network Flow</a>
+          </li>
+        
+          <li>
+            <a href="/2017/10/08/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+</body>
+</html>
